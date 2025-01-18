@@ -11,10 +11,18 @@
     <h1>Trips to Zimbabwe</h1>
     <ul>
         {% for trip in trips %}
+
+        <div>
+            <h2><a href="{% url 'trip_detail' trip.id %}">{{ trip.name }}</a></h2>
+            <p>{{ trip.description|truncatewords:20 }}</p>
+          </div>
             <li>
+                
+
                 <h2>{{ trip.destination.name }}</h2>
                 <p>Start Date: {{ trip.start_date }}</p>
                 <p>End Date: {{ trip.end_date }}</p>
+                <p>Price : {{ trip.price }}</p>
                 <p>Number of Days: {{ trip.number_of_days }}</p>
                 <p>Activities: {{ trip.activities }}</p>
             </li>

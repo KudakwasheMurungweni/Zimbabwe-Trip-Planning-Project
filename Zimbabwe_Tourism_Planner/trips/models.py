@@ -15,6 +15,7 @@ class Trip(models.Model):
     destination = models.ForeignKey(Destination, on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField()
+    price = models.DecimalField(max_digits=100, decimal_places=2, default=0.00)
     number_of_days = models.IntegerField()
     activities = models.TextField()
 

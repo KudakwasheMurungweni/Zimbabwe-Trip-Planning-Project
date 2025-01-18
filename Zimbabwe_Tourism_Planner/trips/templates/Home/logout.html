@@ -7,8 +7,12 @@
     <title>Logged Out</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
-<body>
-    <h1>You have been logged out successfully.</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>You have been logged out</h2>
+<p><a href="{% url 'login' %}">Login again</a></p>
+{% endblock %}
     <p><a href="/">Go to Home</a></p>
 </body>
 </html>

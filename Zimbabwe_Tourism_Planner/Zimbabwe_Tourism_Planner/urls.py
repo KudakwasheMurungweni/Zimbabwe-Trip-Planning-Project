@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from trips import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+     path('', views.custom_login, name='home'),
     path('trips/', include('trips.urls')),
+    path('destinations/', views.destination_list, name='destination_list'), 
+    
 
 ]
